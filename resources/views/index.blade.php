@@ -1,11 +1,22 @@
 <x-layout>
     <div class="bentoGrid">
         <!-- row 1 -->
-        <x-bento title="`tis my website" class="span-4">
-            <p>Pretty much</p>
+        <x-bento title="rumor's website" class="span-4">
+            <p>pretty self explanatory, feel free to <span class="bold">peruse</span>, <span class="bold">dig around</span> and <span class="bold">explore</span></p>
         </x-bento>
-        <x-bento title="Test entry" class="span-8">
-            <p>This is a test entry, one of them</p>
+        <x-bento title="who am I?" class="span-8">
+            <p>
+                very great question, thanks very much, reader
+            </p>
+            <p>
+                I am a <span class="bold">third-year</span> programming <span class="bold">student</span> from <span class="bold">Latvia</span> known in online circles as <span class="bold">rumor1337</span>
+            </p>
+            <p>
+                by now, you're probably asking: <span class="standardBold">what do you even know?</span>
+            </p>
+            <p>
+                I know how to <span class="bold">center a div</span>; but seriously: a <span class="bold">bit of this</span> and a <span class="bold">bit of that</span>, <span class="bold">Laravel</span>, <span class="bold">TypeScript</span>, <span class="bold">Python</span>, <span class="bold">Java</span>, each language at its own level, but can you ever truly be competent?
+            </p>
         </x-bento>
 
         <!-- row 2 -->
