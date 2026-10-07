@@ -1,6 +1,6 @@
 @props(['title'])
 
 <div {{ $attributes->merge(['class' => 'bentoBox']) }}>
-    <h1>{{ $title }}</h1>
+    @if (!empty($title)) <h1>{{ $title }}</h1> @endif
     {{ $slot }}
 </div>

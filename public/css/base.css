@@ -67,9 +67,15 @@ html {
 }
 
 h1 {
-    font-size: 2rem;
+    font-size: 1.5rem;
     font-weight: 500;
     margin-bottom: 1rem;
+}
+
+p {
+    font-size: 1.25rem;
+    margin-bottom: .5rem;
+    color: var(--secondary-text-color);
 }
 
 .bentoGrid {
@@ -87,6 +93,12 @@ h1 {
     min-height: 250px;
     padding: 1.5rem;
     background-color: var(--primary-color);
+    transition: transform 0.3s ease;
+}
+
+.bentoBox:hover {
+    transform: scale(1.02);
+    filter: drop-shadow(0 0 0.5rem color-mix(in srgb, var(--secondary-text-color) 15%, transparent));
 }
 
 .span-3 { grid-column: span 3; }
@@ -96,3 +108,8 @@ h1 {
 .span-7 { grid-column: span 7; }
 .span-8 { grid-column: span 8; }
 .span-12 { grid-column: span 12; }
+
+a {
+    color: var(--accent-color);
+    text-decoration: none;
+}
