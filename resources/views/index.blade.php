@@ -26,7 +26,7 @@
         <x-bento title="Final entry" class="span-5">
             <p>This is the final entry</p>
         </x-bento>
-        
+
         <!-- row 3 -->
         <x-bento title="Not the final entry?" class="span-3">
             <p>Maybe I lied?</p>
@@ -42,5 +42,10 @@
 
     <x-ticker>
         <p>Commit ticker</p>
+
+        @foreach($commits as $commit)
+            {{ $commit['sha'] }}
+            
+        @endforeach
     </x-ticker>
 </x-layout>
