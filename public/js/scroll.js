@@ -1,7 +1,10 @@
 const ticker = document.querySelector('.commitTicker');
 
+// nevermind actually, ai might've cooked.. good implementation?
+// I don't see a point in rewriting it, fixed one bug where it never reset, but yeah I guess?
+
 if (ticker) {
-    const pixelsPerSecond = 480;
+    const pixelsPerSecond = 240;
     let previousTime = null;
 
     function scrollTicker(timestamp) {
@@ -12,7 +15,7 @@ if (ticker) {
 
         ticker.scrollLeft += pixelsPerSecond * elapsed;
 
-        if (ticker.scrollLeft >= ticker.scrollWidth - ticker.clientWidth) {
+        if (Math.round(ticker.scrollLeft) >= ticker.scrollWidth - ticker.clientWidth) {
             ticker.scrollLeft = 0;
         }
 

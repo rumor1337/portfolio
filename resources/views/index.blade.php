@@ -42,10 +42,10 @@
 
     <x-ticker>
         @foreach ($commits as $commit)
-            <p class="commit">
+            <a href="https://github.com/rumor1337/{{ $commit->project }}/commit/{{ $commit->sha }}" class="commit">
                 <span class="bold">{{ $commit->project }}</span>
-                {{ $commit->title }}
-            </p>
+                {{ $commit->title }};
+            </a>
         @endforeach
     </x-ticker>
 </x-layout>

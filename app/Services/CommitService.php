@@ -32,12 +32,15 @@ class CommitService
         foreach ($allRepos as $repo) {
             $repoName = $repo['name'];
 
+            if($repoName === 'rumor1337') continue;
+
             $commits = $github
                 ->get("https://api.github.com/repos/rumor1337/{$repoName}/commits")
                 ->throw()
                 ->json();
 
             foreach ($commits as $commit) {
+
                 $allCommits[] = [
                     'project' => $repoName,
                     'title' => $commit['commit']['message'],
