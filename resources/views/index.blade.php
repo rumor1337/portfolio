@@ -41,11 +41,11 @@
     </div>
 
     <x-ticker>
-        <p>Commit ticker</p>
-
-        @foreach($commits as $commit)
-            {{ $commit['sha'] }}
-            
+        @foreach ($commits as $commit)
+            <p class="commit">
+                <span class="bold">{{ $commit->project }}</span>
+                {{ $commit->title }}
+            </p>
         @endforeach
     </x-ticker>
 </x-layout>

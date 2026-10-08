@@ -59,11 +59,12 @@ table {
     --accent-color: #eb7a49;
 }
 
-html {
+body {
     font-family: 'Geist', sans-serif;
     background-color: var(--secondary-color);
     color: var(--primary-text-color);
-    margin: 0 15% 0 15%;
+    margin-left: 15%;
+    margin-right: 15%;
 }
 
 h1 {
@@ -82,10 +83,11 @@ p {
     display: grid;
     grid-template-columns: repeat(12, 1fr);
     width: 100%;
-    gap: 1.5rem;
-    padding: 1.5rem;
+    gap: 1rem;
     max-width: 1200px;
     margin: 0 auto;
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
 }
 
 .bentoBox {
@@ -95,8 +97,8 @@ p {
     min-height: 250px;
     padding: 1.5rem;
     background-color: var(--primary-color);
-    transition: transform 0.3s ease;
     filter: drop-shadow(0 0.10rem 0.5rem color-mix(in srgb, var(--secondary-text-color) 10%, transparent));
+    transition: 0.3s ease;
 }
 
 .bentoBox:hover {
@@ -132,4 +134,21 @@ a:hover {
 .standardBold {
     font-weight: 500;
     color: var(--primary-text-color);
+}
+
+.commitTicker {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    margin-bottom: 1rem;
+    overflow: hidden;
+}
+
+.commit {
+    position: relative;
+    font-size: 1rem;
+    white-space: nowrap;
+    margin-right: .5rem;
 }

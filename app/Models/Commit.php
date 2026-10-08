@@ -9,7 +9,7 @@ class Commit extends Model
     protected $fillable = [
         'project',
         'title',
-        'commit'
+        'commit',
     ];
 
     protected $table = 'commits';

@@ -14,9 +14,11 @@ return new class extends Migration
         Schema::create('commits', function (Blueprint $table) {
             $table->id();
             $table->string('project');
-            $table->string('title');
-            $table->string('commit');
+            $table->text('title');
+            $table->string('commit', 40);
             $table->timestamps();
+
+            $table->unique(['project', 'commit']);
         });
     }
 
