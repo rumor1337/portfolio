@@ -8,6 +8,7 @@
     <title>@yield('title', 'portfolio')</title>
 </head>
 <body>
+
     {{ $slot }}
 
     <script src="{{ asset('js/scroll.js') }}" defer></script>
