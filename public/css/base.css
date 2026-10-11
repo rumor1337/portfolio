@@ -84,7 +84,7 @@ body > * {
 h1 {
     font-size: 1.7rem;
     font-weight: 600;
-    margin-bottom: 1rem;
+    margin-bottom: .5rem;
 }
 
 p {
@@ -170,4 +170,44 @@ a:hover {
     font-size: 2rem;
     white-space: nowrap;
     margin-right: .5rem;
+}
+
+.margin-top {
+    margin-top: .25rem;
+}
+
+.margin-bottom {
+    margin-bottom: .25rem;
+}
+
+.svgLogo {
+    width: 4.5rem;
+    height: 4.5rem;
+}
+
+.techLink {
+    font-size: .85rem;
+    text-align: center;
+}
+
+.flex-row {
+    display: flex;
+    flex-direction: row;
+}
+
+.flex-row *:not(:last-child) {
+    margin-right: .33rem;
+}
+
+.flex-column {
+    display: flex;
+    flex-direction: column;
+}
+
+.bentoTitle {
+    color: var(--primary-text-color);
+}
+
+.bentoTitle:hover {
+    text-decoration: none;
 }
