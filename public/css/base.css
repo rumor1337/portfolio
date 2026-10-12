@@ -66,14 +66,24 @@ body {
     margin: 0;
     min-height: 100vh;
     background-color: var(--secondary-color);
-    background-image: url("data:image/svg+xml,<svg id='patternId' width='100%' height='100%' xmlns='http://www.w3.org/2000/svg'><defs><pattern id='a' patternUnits='userSpaceOnUse' width='20' height='20' patternTransform='scale(8) rotate(0)'><rect x='0' y='0' width='100%' height='100%' fill='%23eeeeeeff'/><path d='M0 0h10v10H0z'  stroke-width='1' stroke='none' fill='%23fafafafa'/><path d='M10 10h10v10H10z'  stroke-width='1' stroke='none' fill='%23fafafafa'/></pattern></defs><rect width='800%' height='800%' transform='translate(-64,0)' fill='url(%23a)'/></svg>");
-    background-size: cover;
+    background-image: url("data:image/svg+xml,<svg id='patternId' width='160' height='160' xmlns='http://www.w3.org/2000/svg'><defs><pattern id='a' patternUnits='userSpaceOnUse' width='20' height='20' patternTransform='scale(8) rotate(0)'><rect x='0' y='0' width='100%' height='100%' fill='%23eeeeeeff'/><path d='M0 0h10v10H0z'  stroke-width='1' stroke='none' fill='%23fafafafa'/><path d='M10 10h10v10H10z'  stroke-width='1' stroke='none' fill='%23fafafafa'/></pattern></defs><rect width='800%' height='800%' fill='url(%23a)'/></svg>");
     color: var(--primary-text-color);
     
     grid-template-columns: minmax(0, 1fr) min(1200px, 100%) minmax(0, 1fr);
 
     margin-left: 5vw;
     margin-right: 5vw;
+
+    animation: diag 15s linear infinite alternate;
+}
+
+@keyframes diag {
+    0% {
+        background-position: 0 0;
+    }
+    100% {
+        background-position: 640px 640px;
+    }
 }
 
 body > * {
@@ -188,6 +198,11 @@ a:hover {
 .techLink {
     font-size: .85rem;
     text-align: center;
+    transition: 0.2s ease-in-out;
+}
+
+.techLink:hover {
+    transform: scale(1.05);
 }
 
 .flex-row {
@@ -210,4 +225,12 @@ a:hover {
 
 .bentoTitle:hover {
     text-decoration: none;
+}
+
+.align-bottom {
+    margin-top: auto;
+}
+
+.align-top {
+    margin-bottom: auto;
 }
