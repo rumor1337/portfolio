@@ -10,6 +10,7 @@ WORKDIR /var/www/html
 COPY --from=deps /app .
 RUN a2enmod rewrite \
     && cp /usr/local/etc/php/php.ini-production /usr/local/etc/php/php.ini \
+    && echo 'variables_order = EGPCS' > /usr/local/etc/php/conf.d/10-env.ini \
     && sed -ri 's|/var/www/html|/var/www/html/public|g' /etc/apache2/sites-available/000-default.conf \
     && sed -ri '/<Directory \/var\/www\/>/,/<\/Directory>/ s|AllowOverride None|AllowOverride All|' /etc/apache2/apache2.conf \
     && mkdir -p storage/framework/cache/data storage/framework/sessions storage/framework/testing storage/framework/views storage/logs storage/app bootstrap/cache \

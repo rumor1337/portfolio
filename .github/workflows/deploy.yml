@@ -15,5 +15,4 @@ jobs:
           host: 129.151.219.253
           username: opc
           key: ${{ secrets.STAGING_SSH_KEY }}
-          script_stop: true
           script: /usr/local/bin/portfolio-deploy
