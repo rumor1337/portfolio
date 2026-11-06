@@ -1,15 +1,18 @@
 <x-layout>
     <div class="bentoGrid">
         <!-- row 1 -->
-        <x-bento title="rumor's website" class="span-4">
+        <x-bento title="extend's website" href="https://github.com/rumor1337" class="span-4">
             <p>pretty self explanatory, feel free to <span class="bold">peruse</span>, <span class="bold">dig around</span> and <span class="bold">explore</span></p>
+            <p>coding time today: <span class="bold">{{ \Carbon\CarbonInterval::seconds($hackatime)->cascade()->forHumans(true) }}</span> / <span class="bold">1h</span> goal</p>
+        
+        
         </x-bento>
         <x-bento title="who am I?" class="span-8">
             <p>
                 very great question, thanks very much, reader
             </p>
             <p>
-                I am a <span class="bold">third-year</span> programming <span class="bold">student</span> from <span class="bold">Latvia</span> known in online circles as <span class="bold">rumor1337</span>
+                I am a <span class="bold">third-year</span> programming <span class="bold">student</span> from <span class="bold">Latvia</span> known in online circles as <span class="bold">extend</span>, but
             </p>
             <p>
                 by now, you're probably asking: <span class="standardBold">what do you even know?</span>
@@ -39,9 +42,17 @@
                 </a>
             </div>
 
-            </x-bento>
-        <x-bento title="Final entry" class="span-5">
-            <p>This is the final entry</p>
+            <a class="align-bottom" href="https://find.bladee.tech" target="_blank">demo</a>
+        </x-bento>
+        <x-bento title="p8p" href="https://git.smilt.dev/extend/p8p/" class="span-5">
+            <p>peer to peer file sharing application</p>
+            <p class="standardBold">technologies:</p>
+            <div class="flex-row">
+                <a class="svgLogo">
+                    <img class="svgLogo" src="https://skillicons.dev/icons?i=py">
+                    <p class="bold techLink margin-top">python</p>
+                </a>
+            </div>
         </x-bento>
 
         <!-- row 3 -->
