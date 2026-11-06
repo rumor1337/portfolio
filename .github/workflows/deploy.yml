@@ -1,0 +1,19 @@
+name: deploy
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      # server side: restricted key only runs /usr/local/bin/portfolio-deploy
+      # (git pull + docker compose up -d --build), see repo Dockerfile
+      - uses: appleboy/ssh-action@v1
+        with:
+          host: 129.151.219.253
+          username: opc
+          key: ${{ secrets.STAGING_SSH_KEY }}
+          script_stop: true
+          script: /usr/local/bin/portfolio-deploy
