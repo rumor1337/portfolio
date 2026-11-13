@@ -56,15 +56,16 @@
         </x-bento>
 
         <!-- row 3 -->
-        <x-bento title="Not the final entry?" class="span-3">
+        <x-bento title="Not the final entry?" class="span-5">
             <p>Maybe I lied?</p>
         </x-bento>
         <x-bento class="span-3">
             <p>Yeah just an entry?</p>
             <a href="#">test link</a>
         </x-bento>
-        <x-bento title="The final final final final entry" class="span-6">
-            <p>I don't know what to type here anymore, I was intending it to be 5 boxes at most?</p>
+        <x-bento title="contact me" class="span-4">
+            <p>discord: @wwronged</p>
+            <p>mail: extend (at) bladee.tech</p>
         </x-bento>
     </div>
 
