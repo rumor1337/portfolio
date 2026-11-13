@@ -42,7 +42,6 @@
                 </a>
             </div>
 
-            <a class="align-bottom" href="https://find.bladee.tech" target="_blank">demo</a>
         </x-bento>
         <x-bento title="p8p" href="https://git.smilt.dev/extend/p8p/" class="span-5">
             <p>peer to peer file sharing application</p>
@@ -53,19 +52,31 @@
                     <p class="bold techLink margin-top">python</p>
                 </a>
             </div>
+
+            <a class="align-bottom" href="https://github.com/rumor1337/p8p/releases/tag/1.0.0" target="_blank">try it out if interested</a>
         </x-bento>
 
         <!-- row 3 -->
-        <x-bento title="Not the final entry?" class="span-5">
-            <p>Maybe I lied?</p>
+        <x-bento title="aiscreen" class="span-5">
+            <p>SoonTM, AI screenshot tool</p>
+            <p class="bold">screenshot -> ai -> text -> ai image</p>
         </x-bento>
-        <x-bento class="span-3">
-            <p>Yeah just an entry?</p>
-            <a href="#">test link</a>
+        <x-bento title="api.ihopeit.works" class="span-3">
+            <p>cheap AI</p>
+
+            <p class="standardBold">technologies:</p>
+            <div class="flex-row">
+                <a class="svgLogo">
+                    <img class="svgLogo" src="https://skillicons.dev/icons?i=php">
+                    <p class="bold techLink margin-top">php</p>
+                </a>
+            </div>
+
+            <a class="align-bottom" href="https://api.ihopeit.works" target="_blank">try it out if interested</a>
         </x-bento>
         <x-bento title="contact me" class="span-4">
-            <p>discord: @wwronged</p>
-            <p>mail: extend (at) bladee.tech</p>
+            <p><span class="bold">discord</span>: @wwronged</p>
+            <p><span class="bold">mail:</span> extend (at) bladee.tech</p>
         </x-bento>
     </div>
 
