@@ -53,7 +53,7 @@
                 </a>
             </div>
 
-            <a class="align-bottom" href="https://github.com/rumor1337/p8p/releases/tag/1.0.0" target="_blank">try it out if intereste</a>
+            <a class="align-bottom" href="https://github.com/rumor1337/p8p/releases/tag/1.0.0" target="_blank">try it out if interested</a>
         </x-bento>
 
         <!-- row 3 -->
