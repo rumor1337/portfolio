@@ -22,6 +22,11 @@ class CommitService
             'X-GitHub-Api-Version' => '2022-11-28',
         ]);
 
+        // shortcut: env() read directly, breaks silently if config:cache is ever added
+        if ($token = env('GITHUB_TOKEN')) {
+            $github = $github->withToken($token);
+        }
+
         $allRepos = $github
             ->get('https://api.github.com/users/rumor1337/repos')
             ->throw()

@@ -30,4 +30,28 @@ class CommitServiceTest extends TestCase
         Http::assertSentCount(2);
         Http::assertSent(fn ($request): bool => $request->header('X-GitHub-Api-Version')[0] === '2022-11-28');
     }
+
+    public function test_it_sends_auth_token_when_configured(): void
+    {
+        $_ENV['GITHUB_TOKEN'] = 'gh_test_token';
+
+        Http::fake([
+            'api.github.com/users/rumor1337/repos' => Http::response([
+                ['name' => 'genericproductscraper'],
+            ]),
+            'api.github.com/repos/rumor1337/genericproductscraper/commits' => Http::response([
+                ['sha' => 'abc123', 'commit' => ['message' => 'Initial commit']],
+            ]),
+        ]);
+
+        $this->post('/commits/sync');
+
+        Http::assertSent(fn ($request): bool => $request->header('Authorization')[0] === 'Bearer gh_test_token');
+    }
+
+    protected function tearDown(): void
+    {
+        unset($_ENV['GITHUB_TOKEN']);
+        parent::tearDown();
+    }
 }
