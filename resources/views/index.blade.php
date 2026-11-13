@@ -3,7 +3,7 @@
         <!-- row 1 -->
         <x-bento title="extend's website" href="https://github.com/rumor1337" class="span-4">
             <p>pretty self explanatory, feel free to <span class="bold">peruse</span>, <span class="bold">dig around</span> and <span class="bold">explore</span></p>
-            <p>coding time today: <span class="bold">{{ \Carbon\CarbonInterval::seconds($hackatime)->cascade()->forHumans(true) }}</span> / <span class="bold">1h</span> goal</p>
+            <p>coding time today: <span class="bold">{{ \Carbon\CarbonInterval::seconds($hackatime)->cascade()->forHumans(true) }}</span> / <span class="bold">1h</span></p>
         
         
         </x-bento>
@@ -53,7 +53,7 @@
                 </a>
             </div>
 
-            <a class="align-bottom" href="https://github.com/rumor1337/p8p/releases/tag/1.0.0" target="_blank">try it out if interested</a>
+            <a class="align-bottom" href="https://github.com/rumor1337/p8p/releases/tag/1.0.0" target="_blank">try it out if intereste</a>
         </x-bento>
 
         <!-- row 3 -->
